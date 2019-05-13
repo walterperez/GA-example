@@ -21,8 +21,9 @@ componentDidMount() {
     this.props.history.listen((loc, act) => {
       ReactGA.pageview(window.location.pathname + window.location.search);
       console.log(act, loc.pathname, loc.state);
-    });
-  }
+});
+}
+  
 ###################################################################################
 Create-React-App README
 
