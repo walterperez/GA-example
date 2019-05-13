@@ -1,3 +1,31 @@
+                             Installation of Google Analytics in Create-React-App
+Step 0: Install React-GA:
+	
+  Npm I react-ga –save
+
+Step 1: In your main Index.js file, add <Router/> < [Your App Name] /> </Router>:
+	
+  Import {BrowserRouter as Router} from “react-router-dom”;
+	ReactDOM.render(<Router><App/></Router>, document.getElementByID(“root”));
+
+Step 2: In your App.js file (or in your main app file) export default your main component with withRouter:
+	
+  Import {withRouter} from “react-router-dom”;
+	Export default withRouter(App);
+
+Step 3: In your App.js (or in your main app file) add in the componenDidMount() function:
+ 
+componentDidMount() {
+    ReactGA.initialize("ADD HERE YOUR GOOGLE ANALYTICS ID");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    this.props.history.listen((loc, act) => {
+      ReactGA.pageview(window.location.pathname + window.location.search);
+      console.log(act, loc.pathname, loc.state);
+    });
+  }
+###################################################################################################
+                                    Create-React-App README
+###################################################################################################
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
