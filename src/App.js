@@ -33,8 +33,8 @@ function Bruce() {
 function Torrent() {
   return (
     <div className="route">
-      <h1>Torrent</h1>
-      <p>Te gustan las pistolitas xava?</p>
+      <h1>Torrente</h1>
+      <p>Te gustan las pistolitas? POS COMPRATE UNA!</p>
       <img src={torrente} className="App-logo" className="torr" alt="logo" />
     </div>
   );
